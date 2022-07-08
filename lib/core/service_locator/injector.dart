@@ -1,12 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:suitmedia_assessment/features/home/presentation/cubit/home_cubit.dart';
-import 'package:suitmedia_assessment/features/user/data/datasource/network/user_network_datasource.dart';
-import 'package:suitmedia_assessment/features/user/data/repositories/user_repository_impl.dart';
-import 'package:suitmedia_assessment/features/user/domain/repositories/user_repository.dart';
-import 'package:suitmedia_assessment/features/user/domain/usecases/get_all_user.dart';
-import 'package:suitmedia_assessment/features/user/presentation/user_list/cubit/user_list_cubit.dart';
-
+import 'package:goers_assessment/features/species/data/datasource/network/species_network_datasource.dart';
+import 'package:goers_assessment/features/species/data/repositories/species_repository_impl.dart';
+import 'package:goers_assessment/features/species/domain/repositories/species_repository.dart';
+import 'package:goers_assessment/features/species/domain/usecases/get_all_species.dart';
+import 'package:goers_assessment/features/species/presentation/species_list/cubit/species_list_cubit.dart';
 final GetIt getIt = GetIt.instance;
 
 class InjectionContainer {
@@ -24,19 +22,19 @@ void _injectCore() {
 }
 
 void _injectBloc() {
-  getIt.registerFactory(() => HomeCubit());
-  getIt.registerFactory(() => UserListCubit(getIt()));
+
+  getIt.registerFactory(() => SpeciesListCubit(getIt()));
 }
 
 void _injectUseCase() {
-  getIt.registerFactory(() => GetAllUser(getIt()));
+  getIt.registerFactory(() => GetAllSpecies(getIt()));
 }
 
 void _injectRepo() {
-  getIt.registerFactory<UserRepository>(() => UserRepositoryImpl(getIt()));
+  getIt.registerFactory<SpeciesRepository>(() => SpeciesRepositoryImpl(getIt()));
 }
 
 void _injectDataSource() {
-  getIt.registerFactory<UserNetworkDatasource>(
-      () => UserNetworkDatasourceImpl(getIt()));
+  getIt.registerFactory<SpeciesNetworkDatasource>(
+      () => SpeciesNetworkDatasourceImpl(getIt()));
 }

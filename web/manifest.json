@@ -1,6 +1,6 @@
 {
-    "name": "suitmedia_assessment",
-    "short_name": "suitmedia_assessment",
+    "name": "goers_assessment",
+    "short_name": "goers_assessment",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

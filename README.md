@@ -1,4 +1,4 @@
-# suitmedia_assessment
+# goers_assessment
 
 A new Flutter project.
 

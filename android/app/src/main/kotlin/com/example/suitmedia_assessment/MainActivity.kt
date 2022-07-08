@@ -1,4 +1,4 @@
-package com.example.suitmedia_assessment
+package com.example.goers_assessment
 
 import io.flutter.embedding.android.FlutterActivity
 

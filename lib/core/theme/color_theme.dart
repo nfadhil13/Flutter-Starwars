@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorTheme {
-  static const primary = MaterialColor(0XFF2B637B, {
+  static const primary = MaterialColor(0XFFFDE023, {
     50: Color(0xFFd8f3ff),
     100: Color(0xFFb9dff1),
     200: Color(0xFF9bc6dc),
@@ -13,6 +13,6 @@ class ColorTheme {
     800: Color(0xFF1d5065),
     900: Color(0xFF073a4d)
   });
-  static const surface = Colors.white;
-  static const onPrimary = Colors.white;
+  static const surface = Colors.black;
+  static const onPrimary = Colors.black;
 }

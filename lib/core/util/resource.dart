@@ -34,3 +34,18 @@ class Error<T> extends Resource<T> {
 
   Error({required this.exception}) : super._();
 }
+
+class PagedResource<T> {
+  final List<T> data;
+  final int currentPage;
+  final bool hasNextPage;
+
+  const PagedResource(
+      {required this.data,
+      required this.currentPage,
+      required this.hasNextPage});
+
+  factory PagedResource.start() {
+    return const PagedResource(data: [], currentPage: 0, hasNextPage: true);
+  }
+}

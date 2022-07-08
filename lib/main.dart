@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:suitmedia_assessment/core/theme/text_theme.dart';
-import 'package:suitmedia_assessment/features/auth/presentation/login/login_screen.dart';
-import 'package:suitmedia_assessment/features/home/presentation/home_screen.dart';
-import 'package:suitmedia_assessment/features/user/presentation/user_list/user_list_screen.dart';
+import 'package:goers_assessment/core/theme/text_theme.dart';
+import 'package:goers_assessment/features/species/presentation/species_detail/species_detail_screen.dart';
+import 'package:goers_assessment/features/splash/presentation/splash_screen.dart';
 
 import 'core/service_locator/injector.dart';
+import 'features/species/presentation/species_list/species_detail_screen.dart';
 
 void main() async {
   await InjectionContainer.init();
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Goers Assessment',
       theme: ThemeData(
           // This is the theme of your application.
           //
@@ -32,11 +32,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
           textTheme: const AppTextTheme()),
-      initialRoute: LoginScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: {
-        LoginScreen.routeName: ((context) => const LoginScreen()),
-        HomeScreen.routeName: ((context) => const HomeScreen()),
-        UserListScreen.routeName: ((context) => const UserListScreen())
+        SplashScreen.routeName: (context) => const SplashScreen(),
+        SpeciesDetailScreen.routeName: (context) => const SpeciesDetailScreen(),
+        SpeciesListScreen.routeName: ((context) => const SpeciesListScreen())
       },
     );
   }

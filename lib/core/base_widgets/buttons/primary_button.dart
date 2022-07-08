@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:suitmedia_assessment/core/base_widgets/buttons/button_text_alignment.dart';
+import 'package:goers_assessment/core/base_widgets/buttons/button_text_alignment.dart';
 
-import 'package:suitmedia_assessment/core/base_widgets/text/text_attribute.dart';
-import 'package:suitmedia_assessment/core/ext/ctx_ext.dart';
-import 'package:suitmedia_assessment/core/theme/color_theme.dart';
+import 'package:goers_assessment/core/base_widgets/text/text_attribute.dart';
+import 'package:goers_assessment/core/ext/ctx_ext.dart';
+import 'package:goers_assessment/core/theme/color_theme.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String text;
@@ -31,7 +31,6 @@ class PrimaryButton extends StatelessWidget {
     this.borderRadius,
     this.padding,
     this.textAtt,
-
   }) : super(key: key);
 
   @override
